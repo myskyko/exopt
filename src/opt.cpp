@@ -104,7 +104,7 @@ bool OptMan::Synthesize(SynthMan<KissatSolver> &synthman, int nGates, vector<int
       outputs_shift.push_back(i << 1);
     }
     int nGatesAll = aig.nGates;
-    aig.import(aig2, inputs, outputs_shift);
+    aig.insert(aig2, inputs, outputs_shift);
     if(fVerbose) {
       cout << prefix << "Replaced gates : ";
       string delim;
